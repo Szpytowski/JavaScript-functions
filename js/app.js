@@ -23,7 +23,7 @@ console.log(isThisBoolean(false));
 console.log(isThisBoolean('true'));
 
 // 4
-function getCircleArea(radius){
+function getCircleArea(radius) {
     return Math.PI * radius * radius;
 }
 
@@ -35,7 +35,6 @@ console.log(area); // 78.53981633974483
 function getCirclesAreaSum(radius1, radius2) {
     const area1 = getCircleArea(radius1);
     const area2 = getCircleArea(radius2);
-
 
     return area1 + area2;
 }
@@ -50,7 +49,7 @@ const quarterOf = (month) => {
 
 // 7
 function convertMinutesToHours(minutes) {
-    return minutes / 60
+    return minutes / 60;
 }
 
 const hours = convertMinutesToHours(75);
@@ -85,7 +84,7 @@ function opposite(number) {
 
 // 12
 function makeNegative(num) {
-    if (num >0) {
+    if (num > 0) {
         return (num * -1)
     }
 }
@@ -96,15 +95,15 @@ function removeChar(str){
 };
 
 // 14
-function basicOp(operation, value1, value2){
+function basicOp(operation, firstNumber, secondNumber){
     if (operation === '+') {
-        return value1 + value2;
+        return firstNumber + secondNumber;
     } else if (operation === '-') {
-        return value1 - value2;
+        return firstNumber - secondNumber;
     } else if (operation === '*') {
-        return value1 * value2;
+        return firstNumber * secondNumber;
     } else if (operation === '/') {
-        return value1 / value2;
+        return firstNumber / secondNumber;
     } else {
         return 0;
     }
@@ -112,7 +111,7 @@ function basicOp(operation, value1, value2){
 
 // 15
 function century(year) {
-    const century = Math.ceil (year / 100);
+    const century = Math.ceil(year / 100);
     return century;
 }
 
@@ -136,25 +135,24 @@ function areYouPlayingBanjo(name) {
 }
 
 // 18
-function rockPaperScissors(player1, player2) {
-    if (player1 === player2) {
+function rockPaperScissors(player1Choice, player2Choice) {
+    if (player1Choice === player2Choice) {
         return 0;
     }
 
     if (
-        (player1 === 'rock' && player2 === 'scissors') ||
-        (player1 === 'scissors' && player2 === 'paper') ||
-        (player1 === 'paper' && player2 === 'rock')
+        (player1Choice === 'rock' && player2Choice === 'scissors') ||
+        (player1Choice === 'scissors' && player2Choice === 'paper') ||
+        (player1Choice === 'paper' && player2Choice === 'rock')
     ) {
         return 1;
-    } else {
-        return 2;
     }
+    return 2;
 }
 
-console.log(rockPaperScissors('rock', 'scissors')); // 1, Player 1 wins
-console.log(rockPaperScissors('rock', 'paper'));    // 2, Player 2 wins
-console.log(rockPaperScissors('paper', 'paper'));   // 0, It's a draw
+console.log(rockPaperScissors('rock', 'scissors'));
+console.log(rockPaperScissors('rock', 'paper'));
+console.log(rockPaperScissors('paper', 'paper'));
 
 // 20
 function getCalculationResult(firstNumber, secondNumber, calculationType) {
@@ -167,7 +165,7 @@ function getCalculationResult(firstNumber, secondNumber, calculationType) {
     } else if (calculationType === '/') {
         return firstNumber / secondNumber;
     } else {
-        return "null";
+        return null;
     }
 }
 
