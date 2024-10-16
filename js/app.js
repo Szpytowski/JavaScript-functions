@@ -104,9 +104,7 @@ function basicOp(operation, firstNumber, secondNumber){
         return firstNumber * secondNumber;
     } else if (operation === '/') {
         return firstNumber / secondNumber;
-    } else {
-        return 0;
-    }
+    } return 0;
 }
 
 // 15
@@ -119,9 +117,8 @@ function century(year) {
 function evenOrOdd(number) {
     if (number % 2 === 0) {
         return 'Even';
-    } else {
-        return 'Odd';
     }
+    return 'Odd';
 }
 
 // 17
@@ -129,9 +126,8 @@ function areYouPlayingBanjo(name) {
     const firstLetterIsR = name.charAt(0).toLowerCase() === 'r';
     if (firstLetterIsR) {
         return name + " plays banjo";
-    } else {
-        return name + " does not play banjo";
     }
+    return name + " does not play banjo";
 }
 
 // 18
@@ -164,9 +160,8 @@ function getCalculationResult(firstNumber, secondNumber, calculationType) {
         return firstNumber * secondNumber;
     } else if (calculationType === '/') {
         return firstNumber / secondNumber;
-    } else {
-        return null;
     }
+    return null;
 }
 
 console.log(getCalculationResult(45,  35, '*'));
@@ -185,9 +180,7 @@ function getGreaterNumber (firstNumber, secondNumber) {
     if (firstNumber > secondNumber) {
         return firstNumber
     }
-    else if (firstNumber < secondNumber) {
-        return secondNumber
-    }
+    return secondNumber
 }
 
 console.log(getGreaterNumber(888, 777))
@@ -217,9 +210,7 @@ function getSmallerNumber (firstNumber, secondNumber) {
     if (firstNumber < secondNumber) {
         return firstNumber
     }
-    else if (firstNumber > secondNumber) {
-        return secondNumber
-    }
+    return secondNumber
 }
 
 // 27
